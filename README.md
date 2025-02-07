@@ -44,4 +44,4 @@ Ele é uma ferramenta de automação de testes que usa uma sintaxe fácil de ent
 
 ### Nota:
 - Adicione o plugin no vscode do robot para ajudar na visualização
-- Para rodar o projeto é só entrar na pasta e executar robot form.robot
+- Para rodar o projeto é só entrar na pasta e executar `robot form.robot`
