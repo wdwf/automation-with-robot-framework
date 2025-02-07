@@ -8,7 +8,8 @@ ${DELAY}    5s
 ${LOGIN_LINK}    //a[@href="/login"]
 ${INPUT_NAME}    name:name
 ${INPUT_EMAIL}    //input[@data-qa="signup-email"]
-${BUTTON_CONTINUE}    //input[@data-qa="continue-button"]
+${DELETE_LINK}    //a[@href="/delete_account"]
+${BUTTON_CONTINUE}    //a[@data-qa="continue-button"]
 ${INPUT_PASSWORD}    name:password
 ${INPUT_DAY}    id:days
 ${INPUT_MONTH}    id:months
@@ -81,17 +82,17 @@ verifique se a mensagem 'ACCOUNT CREATED!' está visivel
     Wait Until Page Contains    Account Created!
 
 clique em 'Continue'
-    Click Element    Continue
+    Click Element    ${BUTTON_CONTINUE}
 
 verifique se 'Logged in as username' está visivel
     Wait Until Page Contains    Logged in as bob123
 
 Clique em 'Delete Account'
-    Click Element    Delete Account
+    Click Element    ${DELETE_LINK}
 
 verifique se 'ACCOUNT DELETED!' está visivel e clique em 'Continue'
     Wait Until Page Contains    Account Deleted!
-    Click Element    Continue
+    Click Element    ${BUTTON_CONTINUE}
 
 fecha navegador
     Close Browser
